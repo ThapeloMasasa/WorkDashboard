@@ -3083,12 +3083,16 @@ export const dropdownData = [
   },
 ];
 export const SparklineAreaData = [
-  { x: 1, yval: 2 },
-  { x: 2, yval: 6 },
-  { x: 3, yval: 8 },
-  { x: 4, yval: 5 },
-  { x: 5, yval: 10 },
-
+  { x: 0, xval: '2014', yval: 19440 },
+                { x: 1, xval: '2014', yval: 24080 },
+                { x: 2, xval: '2015', yval: 34180 },
+                { x: 3, xval: '2016', yval: 37310 },
+                { x: 4, xval: '2017', yval: 32640 },
+                { x: 5, xval: '2018', yval: 45750 },
+                { x: 6, xval: '2019', yval: 56710 },
+                { x: 7, xval: '2020', yval: 65580 },
+                { x: 8, xval: '2021', yval: 62500 },
+                { x: 9, xval: '2022', yval: 77620 },
 ];
 
 export const lineCustomSeries = [
