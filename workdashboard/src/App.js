@@ -7,16 +7,16 @@ import { Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Ka
 import './App.css';
 import { useStateContext } from './contexts/ContextProvider';
 const App = () => {
-  const {activeMenu} = useStateContext();
+  const {activeMenu, themeSettings, setThemeSettings, currentColor, currentMode} = useStateContext();
 
   return (
-    <div>
+    <div className={currentMode === 'Dark' ? 'dark' : ''}>
       <BrowserRouter>
         <div className="flex relative dark:bg-main-dark-bg">
          <div className="fixed right-4 bottom-4" style={{zIndex: '1000'}}>
          <TooltipComponent content= "Settings" position="Top" >
                 <button
-                className="text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white" style={{background: 'blue', borderRadius: '50%'}}>
+                className="text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white" style={{background: currentColor, borderRadius: '50%'}} onClick={() => setThemeSettings(true)}>
                     <FiSettings />
                 </button>
          </TooltipComponent>
@@ -32,12 +32,13 @@ const App = () => {
             </div>
           )
          }
-         <div className={`dark:bg-main-bg bg-main-bg min-h-screen w-full ${activeMenu ? 'md:ml-72' : 'flex-2'}`}>
+         <div className={`dark:bg-main-dark-bg bg-main-bg min-h-screen w-full ${activeMenu ? 'md:ml-72' : 'flex-2'} `}>
             <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full"> 
                 <Navbar />
             </div>
         
          <div>
+          {themeSettings && <ThemeSettings />}
             <Routes>
               // DashBoard
               <Route path="/" element={<Ecommerce />} />
