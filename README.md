@@ -1,6 +1,6 @@
 # WorkDashboard
 ## This react Web Application createsn an Admin Dashboard App With Theming, Tables, Charts, Calendar, Kanban and More
-# It is composed of four major sections as shown below
+ It is composed of four major sections as shown below
 
 Dashboard landing page
 ![Screenshot 2024-01-17 at 12 42 39 PM](https://github.com/ThapeloMasasa/WorkDashboard/assets/73863365/ab1514ec-8997-4173-876a-ac99df6aa658)
